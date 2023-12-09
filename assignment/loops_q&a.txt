@@ -1,0 +1,19 @@
+Question: What is the key difference between for and while loops?
+
+Answer: The main difference is in their syntax and initialization. A for loop is often used when the number of iterations is known, while a while loop is suitable when the condition for termination is more complex.
+
+Question: Explain the purpose of the break statement in a loop.
+
+Answer: The break statement is used to exit a loop prematurely. When encountered, it immediately terminates the loop, and control moves to the next statement after the loop.
+
+Question: How does the forEach loop differ from a traditional for loop?
+
+Answer: The forEach loop is a higher-order function used with arrays to iterate through each element. It takes a callback function as an argument and is often more concise than a traditional for loop.
+
+Question: What does the continue statement do in a loop?
+
+Answer: The continue statement is used to skip the rest of the code inside a loop for the current iteration and proceed to the next iteration.
+
+Question: How do you iterate over the properties of an object in JavaScript?
+
+Answer: You can use a for...in loop to iterate over the enumerable properties of an object.

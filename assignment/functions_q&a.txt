@@ -1,0 +1,46 @@
+
+
+Question: What is the purpose of a JavaScript function?
+
+Answer: Functions are used to encapsulate and reuse code, making it modular and promoting a more organized structure in your programs.
+
+Question: How do you declare a function in JavaScript?
+
+Answer: You can declare a function using the function keyword followed by a name and a pair of parentheses, like function myFunction() {}.
+
+Question: What is a function parameter?
+
+Answer: A function parameter is a variable listed in the function's parentheses, used to receive values when the function is called.
+
+Question: How do you call (invoke) a function in JavaScript?
+
+Answer: To call a function, use its name followed by parentheses. For example, myFunction();.
+
+Question: What is the purpose of the return statement in a function?
+
+Answer: The return statement is used to specify the value that a function should return. It also ends the execution of the function.
+
+Question: How can you create an anonymous function in JavaScript?
+
+Answer: Anonymous functions are created using function expressions, like var myFunction = function() {}; or using arrow functions, like var myFunction = () => {};.
+
+Question: What is function scope in JavaScript?
+
+Answer: Function scope refers to the visibility and accessibility of variables, where variables declared within a function are typically local to that function.
+
+Question: What is hoisting in JavaScript functions?
+
+Answer: Hoisting is a JavaScript behavior where function declarations are moved to the top of the scope during compilation, allowing you to call a function before its actual declaration in the code.
+
+Question: How can you pass arguments to a function in JavaScript?
+
+Answer: Arguments are passed to a function by placing values inside the parentheses when calling the function. For example, myFunction(arg1, arg2);.
+
+Question: What are arrow functions, and how are they different from regular functions?
+
+Answer: Arrow functions are a concise way to write anonymous functions. They have a shorter syntax, don't have their own this value, and cannot be used as constructors.
+
+
+
+
+

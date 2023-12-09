@@ -1,0 +1,15 @@
+Question: What is a JavaScript module?
+
+Answer: A JavaScript module is a self-contained unit of code that encapsulates functionality, variables, and functions. It helps in organizing and separating concerns in a program.
+
+Question: How do you export functionality from a module?
+
+Answer: You can use the export keyword to make variables, functions, or classes available outside the module.
+
+Question: Why use modules in JavaScript?
+
+Answer: Modules promote code organization, encapsulation, and reusability. They help manage dependencies, reduce the risk of naming conflicts, and improve code maintainability.
+
+Question: What is the file extension commonly used for JavaScript modules?
+
+Answer: The common file extension for JavaScript modules is .mjs for ECMAScript modules. In Node.js, you can also use .js and specify "type": "module" in the package.json file.

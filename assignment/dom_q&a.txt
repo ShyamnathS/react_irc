@@ -1,0 +1,42 @@
+1.what is dom in js?
+
+In JavaScript, the Document Object Model (DOM) is a programming interface that represents the structure of a document as a tree of objects. The document can be an HTML or XML document, and the DOM represents the structure of the document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, text content, etc.
+
+The DOM provides a way for programs to manipulate the structure, style, and content of web documents. Using the DOM, JavaScript can dynamically update and change the content, structure, and style of a web page in response to user actions, events, or other factors.
+
+2.What is the use of DOM manipulation ?
+
+n brief, DOM manipulation in web development allows developers to:
+
+Update Content Dynamically:
+Modify the text, HTML, or attributes of elements on a web page.
+
+Enhance User Interface Interactivity:
+Respond to user actions like clicks or keypresses to create interactive and responsive interfaces.
+
+Validate Forms and Handle Submissions:
+Validate user inputs in forms and control the submission process.
+
+Create Animations and Effects:
+Change style properties over time to create animations and visual effects.
+
+Facilitate AJAX and Asynchronous Operations:
+Fetch and update data from a server asynchronously, enabling a smoother user experience.
+
+Overall, DOM manipulation is essential for building dynamic, user-friendly, and feature-rich web applications.
+
+
+List the commonly used DOM methods
+Commonly Used Methods :
+        1.getElementById
+        2.getElementByClassName
+        3.getElementsByTagName
+        4.getElementsByName 
+        5.querySelector 
+        6.querySelectorAll
+        7.parentNode 
+        8.childNodes 
+        9.nextSibling
+        10.previousSibling
+        11.firstChild 
+        12.lastChild
