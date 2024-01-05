@@ -1,0 +1,62 @@
+/* App.css */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .email-inbox {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .email-list {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .email-list-item {
+    border: 1px solid #555;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .email-list-item:hover {
+    background-color: #444;
+  }
+  
+  .email-list-item h3 {
+    margin: 0;
+    color: #eee;
+  }
+  
+  .email-list-item p {
+    margin: 0;
+    color: #bbb;
+  }
+  
+  .email-list-item small {
+    color: #888;
+  }
+  
+  .email-content {
+    margin-top: 20px;
+    border: 1px solid #555;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .email-content h2 {
+    margin-bottom: 10px;
+    color: #eee;
+  }
+  

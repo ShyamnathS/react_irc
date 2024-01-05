@@ -1,0 +1,108 @@
+body {
+
+    background-image: url('E:\SKCT\2nd year\3rd sem\INDUSTRY\REACT\day4\project\CIA1_PRO\src\back2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav {
+    background-color: #2C3E50;
+    
+    overflow: hidden;
+  }
+
+  #t{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  #t:hover {
+    background-color: #566573;
+    
+    color: #ECF0F1;
+  }
+
+
+  #change{
+    
+    color: white;
+    text-align: center;
+    margin-left: 1000px;
+    /* margin-top: 200px; */
+    /* width: min-content; */
+    /* border: 2px solid blue; */
+    text-decoration: none;
+    /* padding: 20px; */
+    /* padding-top: 20px; */
+  }
+
+  #change:hover{
+    background-color: #566573;
+    color: #ECF0F1;
+  }
+
+
+  section {
+    /* color:#0a75ef;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 40px; */
+
+    padding: 40px;
+    text-align: center;
+    
+  }
+
+  /* section {
+    background-color: #F4F4F4;
+    
+
+    padding: 40px;
+    text-align: center;
+  } */
+
+  h2 {
+    color: #fefbfb;
+    font-weight: 1000;
+    font-size: 50px;
+  }
+
+  p {
+    color: #fbf4f4;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 1000;
+    /* font-size: 5px; */
+  }
+
+
+  footer {
+    margin-top: 170px;
+    background-color: #2C3E50;
+    color: white;
+    padding: 3px;
+    text-align: center;
+  }
+
+ 
+ 
+

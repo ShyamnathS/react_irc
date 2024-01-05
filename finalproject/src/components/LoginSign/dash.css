@@ -1,0 +1,168 @@
+/* EmployeeDashboard.css
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+  
+  .dashboard-container {
+    background-color: #f4f4f4;
+    height: 800px;
+  }
+  
+  .dashboard-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .dashboard-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2em;
+   
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    margin: 1em;
+    max-width: 300px;
+  }
+  
+  .welcome-card {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .task-card {
+    background-color: #64b5f6;
+    color: #fff;
+  }
+  
+  .project-card {
+    background-color: #ffb74d;
+    color: #fff;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+
+  .dashboard-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .employee-icon {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+  }
+
+  #mail{
+    margin-left: 400px;
+  } */
+
+
+  /* dash.css */
+
+/* Add dark theme styles */
+.dashboard-container {
+  background-color: #303030; /* Dark background color */
+  color: #ffffff; /* Light text color */
+}
+
+.dashboard-header {
+  background-color: #1a1a1a; /* Darker header background color */
+  color: #ffffff; /* Light text color */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-main {
+  padding: 20px;
+}
+
+/* Add styles for cards */
+.card {
+  background-color: #424242; /* Card background color */
+  color: #ffffff; /* Light text color */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add styles for tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #757575; /* Border color */
+}
+
+th {
+  background-color: #333; /* Header background color */
+}
+
+/* Add styles for links */
+a {
+  color: #42a5f5; /* Link color */
+}
+
+/* Add styles for Avatar */
+#mail {
+  margin-right: 10px;
+}
+
+/* Add styles for Badge */
+.MuiBadge-dot {
+  background-color: #ef5350; /* Badge dot color */
+}
+
+/* Add styles for MailIcon */
+#mail svg {
+  fill: #ffffff; /* MailIcon color */
+}
+
+#routess{
+  text-decoration: none;
+}

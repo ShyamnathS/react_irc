@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+
+  
+  /* Set background image */
+  /* background-image: url('back.jpg'); */
+  /* Ensure the background covers the entire viewport */
+  /* background-size: cover; */
+  /* Center the background image */
+  /* background-position: center; */
+  /* Fixed background to prevent scrolling */
+  /* background-attachment: fixed; */
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
