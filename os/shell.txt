@@ -1,0 +1,181 @@
+1. Greatest of three numbers
+
+
+
+echo "Enter three numbers:"
+read num1
+read num2
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]; then
+  echo "$num1 is the greatest."
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]; then
+  echo "$num2 is the greatest."
+else
+  echo "$num3 is the greatest."
+fi
+
+
+
+2. Factorial of N numbers
+
+
+echo "Enter a number:"
+read num
+
+factorial=1
+for ((i=1; i<=num; i++)); do
+  factorial=$((factorial * i))
+done
+
+echo "Factorial of $num is $factorial."
+
+
+3. Sum of N numbers
+
+#!/bin/bash
+
+echo "Enter the number of elements:"
+read n
+
+sum=0
+echo "Enter $n numbers:"
+for ((i=1; i<=n; i++)); do
+  read num
+  sum=$((sum + num))
+done
+
+echo "Sum of $n numbers is $sum."
+
+
+4. Odd or Even
+
+#!/bin/bash
+
+echo "Enter a number:"
+read num
+
+if [ $((num % 2)) -eq 0 ]; then
+  echo "$num is even."
+else
+  echo "$num is odd."
+fi
+
+
+5. Fibonacci series
+
+#!/bin/bash
+
+echo "Enter the number of terms in the Fibonacci series:"
+read n
+
+a=0
+b=1
+
+echo "Fibonacci series:"
+for ((i=0; i<n; i++)); do
+  echo -n "$a "
+  temp=$((a + b))
+  a=$b
+  b=$temp
+done
+echo
+
+
+6. Multiplication Table
+
+
+#!/bin/bash
+
+echo "Enter a number to generate its multiplication table:"
+read num
+
+echo "Multiplication table for $num:"
+for ((i=1; i<=10; i++)); do
+  echo "$num x $i = $((num * i))"
+done
+
+
+7. Swapping of Two Numbers
+
+#!/bin/bash
+
+echo "Enter two numbers:"
+read num1
+read num2
+
+echo "Before swapping: num1=$num1, num2=$num2"
+
+# Swapping logic
+temp=$num1
+num1=$num2
+num2=$temp
+
+echo "After swapping: num1=$num1, num2=$num2"
+
+
+8. Palindrome Check
+
+#!/bin/bash
+
+echo "Enter a string or number to check for palindrome:"
+read input
+
+reverse=$(echo "$input" | rev)
+
+if [ "$input" == "$reverse" ]; then
+  echo "$input is a palindrome."
+else
+  echo "$input is not a palindrome."
+fi
+
+
+9. Positive or Negative Number
+
+
+#!/bin/bash
+
+echo "Enter a number:"
+read num
+
+if [ $num -gt 0 ]; then
+  echo "$num is a positive number."
+elif [ $num -lt 0 ]; then
+  echo "$num is a negative number."
+else
+  echo "$num is zero."
+fi
+
+
+10. Area of Different Shapes
+
+#!/bin/bash
+
+echo "Choose a shape (1. Circle, 2. Rectangle, 3. Triangle):"
+read choice
+
+case $choice in
+  1)
+    echo "Enter the radius of the circle:"
+    read radius
+    area=$(echo "3.14159 * $radius * $radius" | bc)
+    echo "Area of the circle is $area."
+    ;;
+  2)
+    echo "Enter the length and width of the rectangle:"
+    read length width
+    area=$((length * width))
+    echo "Area of the rectangle is $area."
+    ;;
+  3)
+    echo "Enter the base and height of the triangle:"
+    read base height
+    area=$(echo "0.5 * $base * $height" | bc)
+    echo "Area of the triangle is $area."
+    ;;
+  *)
+    echo "Invalid choice."
+    ;;
+esac
+
+
