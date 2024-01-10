@@ -1,0 +1,262 @@
+App.css
+
+
+.App {
+  text-align: center;
+}
+
+
+Form.css
+
+
+
+.form__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.register__form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: last baseline;
+  margin: 10px 0;
+}
+
+label {
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 200px;
+  height: 20px;
+  text-align: left;
+  letter-spacing: 1px;
+  padding-left: 10px;
+  border: 0.2px solid #00000090;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus-within {
+  border: 1.1px solid #000;
+}
+
+.submit__btn {
+  width: 120px;
+  height: 25px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+index.css
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+Form.jsx
+
+
+
+
+import React, { useRef } from 'react';
+import '../assets/css/Form.css';
+
+const LoginForm = () => {
+    const emailInputRef = useRef(null);
+    const passwordInputRef = useRef(null);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = {
+            email: emailInputRef.current.value,
+            password: passwordInputRef.current.value
+        };
+
+        console.log(formData);
+        emailInputRef.current.value = '';
+        passwordInputRef.current.value = '';
+        emailInputRef.current.focus();
+    }
+
+    return (
+        <div className='form__container'>
+            <form className='register__form' method='POST' onSubmit={handleSubmit}>
+                <div className="input__fields">
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        ref={emailInputRef}
+                    />
+                </div>
+                <div className="input__fields">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        required
+                        minLength={8}
+                        maxLength={15}
+                        ref={passwordInputRef}
+                    />
+                </div>
+                <button className='submit__btn' type="submit">Login</button>
+            </form>
+        </div>
+    );
+}
+
+export default LoginForm;
+
+
+
+App.test.js
+
+
+
+/* eslint-disable testing-library/no-node-access */
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import LoginForm from '../components/Form';
+
+test('login_form_renders_with_two_input_fields', () => {
+    render(<LoginForm />);
+
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    expect(emailInput).toBeInTheDocument();
+    expect(passwordInput).toBeInTheDocument();
+});
+
+test('login_form_handles_form_submission_correctly', () => {
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => { });
+
+    render(<LoginForm />);
+
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
+    fireEvent.change(passwordInput, { target: { value: 'password123' } });
+
+    fireEvent.submit(document.querySelector('form'));
+
+    expect(consoleSpy).toHaveBeenCalledWith({
+        email: 'test@example.com',
+        password: 'password123',
+    });
+
+    expect(emailInput.value).toBe('');
+    expect(passwordInput.value).toBe('');
+    expect(emailInput).toHaveFocus();
+    consoleSpy.mockRestore();
+});
+
+
+App.js
+
+
+import React from 'react';
+import './assets/css/App.css';
+import LoginForm from './components/Form';
+
+function App() {
+
+  return (
+    <div className="App">
+      <LoginForm />
+    </div>
+  );
+}
+
+export default App;
+
+
+index.js
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './assets/css/index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+reportWebVitals();
+
+
+reportWebVitals.js
+
+
+const reportWebVitals = onPerfEntry => {
+  if (onPerfEntry && onPerfEntry instanceof Function) {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+      getTTFB(onPerfEntry);
+    });
+  }
+};
+
+export default reportWebVitals;
+
+
+setupTests.js
+
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom';
+
+
